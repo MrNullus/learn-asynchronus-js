@@ -8,14 +8,7 @@ Quando se trata de sincrono, ou seja, sincronismo é de modo claro ter um fluxo 
 
 Assim sendo, pense que um navegador recebeu a requisição para pegar 3 imagens o JS irá capturar uma resposta dessa request e de modo  sincrono só mostrara 1 imagem por vez.
 
-```diff
-		 [ Request ]													Browser	
-																					  |___________
-imagem 1      imagem 2      imagem 3        |          |
--------->>    -------->>    -------->>      |    UI    | 
-																					  |	         |
-<------------------------------------------>|__________| 
-```
+![Captura de tela 2023-01-17 175428](https://user-images.githubusercontent.com/70487766/213010378-53d53a94-ec15-4e6d-bfa7-522969d00321.png)
 
 Ao olharmos isso, teremos de modo claro o que é o sincronismo: "Em fila indiana, uma tarefa por vez". Onde uma tarefa deve ser concluida para que a outra seja iniciada.
 
@@ -26,17 +19,6 @@ Agora, que se entendeu o que é o "sincronismo" deve se já imaginar do que se t
 
 Vamos pegar o exemplo anterior:
 
-```diff
-		 [ Request ]													
-																	
-imagem 1            										 Browser	
--------->>   																|----------| 	
-   						imagem 2											|					 |
-							-------->>     								| 				 |	
-														imagem 3		    |					 |
-														-------->>      |    UI    | 
-																					  |	         |
-<------------------------------------------>|__________| 
-```
+![image](https://user-images.githubusercontent.com/70487766/213010833-2801ccf7-f270-497d-8c49-d3afa96421d2.png)
 
 Percebe-se que há diferenças claras no modo de funcionamento como as diferentes filas para cada imagem, ou seja, cada foto está sendo carregada de modo independente. Sendo assim, o conceito de 1 por 1 não existem nesse fluxo, seria muito mais: "Cada um no seu pedaço", ou mesmo; "10 tarefas para 10 mãos, cada mão para uma tarefa o que acontecer com uma não interfere na outra e nem impede ela".
