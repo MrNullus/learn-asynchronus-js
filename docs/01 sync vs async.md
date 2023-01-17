@@ -1,7 +1,7 @@
 # Learn Asynchronus JavaScript
 
 ## Sync vs Async
-O JavaScript consegue funcinar de duas formas elementarmente de modo: sincrono e assincrono.
+O JavaScript consegue funcionar de duas formas elementarmente: sincrono e assincrono.
 
 ### Sincrono
 Quando se trata de sincrono, ou seja, sincronismo é de modo claro ter um fluxo de 1 por 1.
